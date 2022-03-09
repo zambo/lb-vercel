@@ -1,0 +1,25 @@
+// import useSWR from "swr";
+// import { useEffect, useState } from "react";
+
+// const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+
+// export default function useFetch(query, { variables } = {}) {
+//   const [response, setResponse] = useState(null);
+
+//   const fetcher = async () => {
+//     const response = await fetch(API_URL, {
+//       body: JSON.stringify({
+//         query,
+//         variables,
+//       }),
+//       headers: { "Content-type": "application/json" },
+//       method: "POST",
+//     });
+//     const { data } = await response.json();
+//     return data;
+//   };
+
+//   const { data, error } = useSWR([query], fetcher);
+
+//   return { data, error };
+// }

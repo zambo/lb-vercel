@@ -1,0 +1,50 @@
+.footer {
+  display: block;
+  background-color: theme("colors.gray.900");
+
+  ul,
+  li {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.wrapper {
+  @apply container;
+  margin-top: auto;
+  padding-top: theme("padding.16");
+  padding-bottom: theme("padding.16");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: theme("gap.8");
+  color: theme("colors.gray.200");
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: theme("gap.6");
+  grid-column: span 12 / span 12;
+  color: theme("colors.gray.200");
+  line-height: theme("lineHeight.loose");
+  @screen lg {
+    grid-column: span 6 / span 6;
+  }
+
+  @screen xl {
+    grid-column: span 4 / span 4;
+  }
+}
+
+.columns {
+  @apply w-full grid grid-cols-1 lg:grid-cols-12 mt-16 gap-8;
+}

@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+} */
+
+:root {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-800 tracking-tight font-extrabold mb-8 leading-tight;
+}
+
+@layer base {
+  html,
+  body {
+    @apply min-h-screen text-gray-500;
+  }
+
+  body {
+    @apply selection:bg-primary-100 selection:text-primary-600 overflow-y-visible;
+  }
+
+  .post-single {
+    a {
+      @apply text-primary-600;
+    }
+
+    * {
+      @apply max-w-full;
+
+      * {
+        @apply max-w-full;
+      }
+    }
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+
+  p,
+  ul,
+  li,
+  ol {
+    @apply leading-loose;
+
+    a {
+      @apply text-gray-600 underline;
+
+      &:hover {
+        @apply text-primary-600;
+      }
+    }
+  }
+
+  ul,
+  ol,
+  dl {
+    @apply mb-8;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+
+  ol {
+    @apply list-decimal list-inside;
+  }
+
+  dl {
+    dt {
+      @apply font-bold;
+    }
+    dd {
+      @apply mb-8;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-800 tracking-tight font-extrabold mb-8 leading-tight;
+  }
+
+  img {
+    @apply mb-8;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h5 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h6 {
+    @apply text-lg md:text-xl;
+  }
+
+  /* 
+  h1 {
+    @apply lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  } */
+
+  hr {
+    @apply my-8;
+  }
+
+  .content {
+    p {
+      @apply text-gray-500 text-lg mb-8;
+    }
+
+    img {
+      max-width: 140%;
+      width: 140%;
+      margin-left: -20%;
+      position: relative;
+    }
+
+    fieldset {
+      @apply border border-gray-200 p-8;
+      & legend {
+        @apply px-4 -mx-4;
+      }
+    }
+  }
+}
+
+@layer components {
+  .dark-cta * {
+    @apply text-white !important;
+  }
+}

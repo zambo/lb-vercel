@@ -1,0 +1,106 @@
+/* 
+** A full list of colors is available at
+** https://tailwindcss.com/docs/customizing-colors 
+*/
+
+.category {
+  @apply shadow-md shadow-black/20;
+  text-transform: uppercase;
+  padding: theme("padding[0.5]") theme("padding.2");
+  font-size: theme("fontSize.xxs");
+  letter-spacing: theme("letterSpacing.wider");
+  border-radius: theme("borderRadius.md");
+  background-color: theme("colors.gray.100");
+  color: theme("colors.gray.600");
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+      opacity: theme("opacity.70");
+    }
+  }
+
+  &[data-label="wordpress"] {
+    background-color: theme("colors.slate.100");
+    color: theme("colors.slate.600");
+  }
+  &[data-label="warm-leads"] {
+    background-color: theme("colors.gray.100");
+    color: theme("colors.gray.600");
+  }
+  &[data-label="updates"] {
+    background-color: theme("colors.teal.100");
+    color: theme("colors.teal.600");
+  }
+  &[data-label="uncategorized"] {
+    background-color: theme("colors.cyan.100");
+    color: theme("colors.cyan.600");
+  }
+  &[data-label="tools"] {
+    background-color: theme("colors.amber.100");
+    color: theme("colors.amber.600");
+  }
+  &[data-label="sales"] {
+    background-color: theme("colors.emerald.100");
+    color: theme("colors.emerald.600");
+  }
+  &[data-label="other"] {
+    background-color: theme("colors.stone.100");
+    color: theme("colors.stone.600");
+  }
+  &[data-label="notifications"] {
+    background-color: theme("colors.rose.100");
+    color: theme("colors.rose.600");
+  }
+  &[data-label="marketing"] {
+    background-color: theme("colors.violet.100");
+    color: theme("colors.violet.600");
+  }
+  &[data-label="lead-nurturing"] {
+    background-color: theme("colors.sky.100");
+    color: theme("colors.sky.600");
+  }
+  &[data-label="lead-hacking"] {
+    background-color: theme("colors.orange.100");
+    color: theme("colors.orange.600");
+  }
+  &[data-label="lead-generation"] {
+    background-color: theme("colors.red.100");
+    color: theme("colors.red.600");
+  }
+  &[data-label="lead-engagement"] {
+    background-color: theme("colors.lime.100");
+    color: theme("colors.lime.600");
+  }
+  &[data-label="inspiration"] {
+    background-color: theme("colors.indigo.100");
+    color: theme("colors.indigo.600");
+  }
+  &[data-label="getting-data-out"] {
+    background-color: theme("colors.purple.100");
+    color: theme("colors.purple.600");
+  }
+  &[data-label="getting-data-in"] {
+    background-color: theme("colors.pink.100");
+    color: theme("colors.pink.600");
+  }
+  &[data-label="events"] {
+    background-color: theme("colors.fuchsia.100");
+    color: theme("colors.fuchsia.600");
+  }
+  &[data-label="enrichment"] {
+    background-color: theme("colors.green.100");
+    color: theme("colors.green.600");
+  }
+  &[data-label="email-tracking"] {
+    background-color: theme("colors.yellow.100");
+    color: theme("colors.yellow.600");
+  }
+  &[data-label="email"] {
+    background-color: theme("colors.blue.100");
+    color: theme("colors.blue.600");
+  }
+}

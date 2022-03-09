@@ -1,0 +1,117 @@
+.button {
+  font-weight: theme("fontWeight.bold");
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: theme("borderRadius.lg");
+  padding-top: theme("padding.2");
+  padding-bottom: theme("padding.2");
+  padding-left: theme("padding.6");
+  padding-right: theme("padding.6");
+  font-size: theme("fontSize.base");
+  color: theme("colors.gray.500");
+  line-height: theme("lineHeight.loose");
+  flex-grow: 1;
+  transition-property: background-size, background-position, background-color,
+    color;
+  transition-duration: theme("transitionDuration.DEFAULT");
+  transition-timing-function: theme("transitionTimingFunction.in-out");
+}
+
+/* Primary Style */
+.primary {
+  composes: button;
+  @apply bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700;
+  color: theme("colors.white");
+  background-size: 200% 200%;
+  &:hover {
+    background-position: 100% 100%;
+  }
+}
+
+/* Secondary */
+.secondary {
+  composes: button;
+  color: theme("colors.blue.400");
+  background-color: theme("colors.primary.50");
+  &:hover {
+    color: theme("colors.blue.500");
+    background-color: theme("colors.primary.100");
+  }
+}
+
+/* Outline */
+.outline {
+  composes: button;
+  color: theme("colors.gray.500");
+  background: transparent;
+  border-width: theme("borderWidth.DEFAULT");
+  border-color: theme("colors.gray.300");
+  &:hover {
+    background-color: theme("colors.gray.500");
+    color: theme("colors.white");
+  }
+}
+
+/* Text */
+.text {
+  composes: button;
+  padding-left: theme("padding.2");
+  padding-right: theme("padding.2");
+  color: theme("colors.gray.500");
+  background: transparent;
+  &:hover {
+    color: theme("colors.gray.700");
+  }
+}
+
+/* White Style */
+.white {
+  composes: button;
+  color: theme("colors.primary.500");
+  background-color: theme("colors.white");
+  &:hover {
+    color: theme("colors.primary.600");
+    background-color: theme("colors.primary.50");
+  }
+}
+
+/* Light Style */
+.light {
+  composes: button;
+  color: theme("colors.gray.500");
+  background-color: theme("colors.gray.50");
+  &:hover {
+    color: theme("colors.gray.600");
+    background-color: theme("colors.gray.200");
+  }
+}
+
+.icon {
+  .left,
+  .right {
+    height: auto;
+    transform: translateY(1px);
+    transition-property: transform;
+    transition-duration: theme("transitionDuration.DEFAULT");
+    transition-timing-function: theme("transitionTimingFunction.in-out");
+  }
+  .left {
+    margin-right: theme("margin.2");
+  }
+
+  .right {
+    margin-left: theme("margin.2");
+  }
+
+  &:hover {
+    .right {
+      transform: translateX(theme("translate.1"));
+    }
+  }
+}
+
+.link {
+  &[aria-current="page"] span {
+    color: theme("colors.gray.800");
+  }
+}

@@ -1,0 +1,25 @@
+.wrapper {
+  @apply flex flex-col lg:flex-row gap-16 justify-start;
+}
+
+.content {
+  @screen lg {
+    max-width: calc(100% - theme("gap.16") - 320px);
+  }
+}
+
+.sidebar {
+  @apply flex-shrink-0 relative flex flex-col gap-16;
+
+  @screen lg {
+    width: 320px;
+  }
+}
+
+.text {
+  @apply leading-loose space-y-6;
+
+  li {
+    @apply list-none;
+  }
+}

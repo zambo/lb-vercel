@@ -1,0 +1,46 @@
+/* Hamburger */
+.hamburgerWrapper {
+  position: relative;
+  z-index: theme("zIndex.50");
+  @screen md {
+    order: -99999;
+  }
+
+  @screen xl {
+    display: none;
+  }
+}
+
+.hamburger {
+  stroke: currentColor;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: theme("transitionDuration.DEFAULT");
+  transition-timing-function: theme("transitionTimingFunction.in-out");
+  user-select: none;
+  path {
+    transform-origin: center;
+    transition-duration: theme("transitionDuration.200");
+    transition-property: stroke-dasharray, stroke-dashoffset, opacity;
+    transition-timing-function: theme("transitionTimingFunction.in-out");
+  }
+
+  :nth-child(1),
+  :nth-child(2) {
+    opacity: 100;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: -63px;
+  }
+}
+
+.active {
+  transition: transform 200ms;
+  transform: rotate(45deg);
+  :nth-child(1),
+  :nth-child(2) {
+    stroke-dashoffset: 63px;
+  }
+  :nth-child(3) {
+    transform: rotate(-270deg);
+  }
+}

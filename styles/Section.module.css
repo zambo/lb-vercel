@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  /* padding: theme("padding.16"); */
+
+  &:not([data-full-width]) {
+    & > div {
+      @apply container;
+    }
+  }
+
+  &[data-full-width] {
+    /* Style the first child only */
+    & > div {
+      position: relative;
+      z-index: theme("zIndex.20");
+    }
+  }
+
+  &[data-background="light"] {
+    @apply bg-gradient-to-br from-gray-50 to-gray-200;
+  }
+
+  &[data-background="dark"] {
+    @apply bg-gradient-to-br from-gray-700 to-gray-900;
+  }
+
+  &[data-background="blue"] {
+    @apply bg-gradient-to-br from-primary-500 to-primary-700;
+  }
+}

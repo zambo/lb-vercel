@@ -1,0 +1,8 @@
+.kicker {
+  letter-spacing: theme("letterSpacing.wider");
+  font-size: theme("fontSize.xs");
+  text-transform: uppercase;
+  color: theme("colors.primary.700");
+  position: relative;
+  line-height: theme("lineHeight.tight");
+}

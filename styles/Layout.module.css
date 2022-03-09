@@ -1,0 +1,15 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: theme("fontFamily.body");
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  z-index: theme("zIndex.10");
+}

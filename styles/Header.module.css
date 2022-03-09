@@ -1,0 +1,36 @@
+.header {
+  @apply w-full transition-all transform-gpu duration-150 z-50;
+}
+
+.fixedHeader {
+  @apply fixed z-50 w-full h-screen;
+}
+
+.logo {
+  @apply relative z-50;
+}
+
+.wrapper {
+  @apply container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: theme("gap.2");
+  width: 100%;
+  padding-top: theme("padding.6");
+  padding-bottom: theme("padding.6");
+
+  @screen md {
+    justify-items: start;
+  }
+  @screen xl {
+    gap: theme("gap.8");
+  }
+}
+
+.buttons {
+  @apply space-x-2 box-border justify-end relative z-50 md:flex-grow;
+
+  @apply hidden md:flex;
+}
