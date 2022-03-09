@@ -11,7 +11,7 @@ export default function Categories({ data = [], className }) {
             className={Styles.category}
             key={node.slug}
             data-label={node.slug}>
-            <Link href={`/category/${node.slug}`}>{node.name}</Link>
+            <span href={`/category/${node.slug}`}>{node.name}</span>
           </li>
         );
       })}
